@@ -1,0 +1,1502 @@
+[
+    {
+        "tradeId":  "TRD-100001",
+        "symbol":  "AAPL",
+        "side":  "BUY",
+        "quantity":  250,
+        "price":  120,
+        "trader":  "JSMITH",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T09:00:00.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:00:00.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100002",
+        "symbol":  "MSFT",
+        "side":  "SELL",
+        "quantity":  800,
+        "price":  157.73,
+        "trader":  "ABROWN",
+        "book":  "EQUITIES_US",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T09:07:13.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:07:13.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100003",
+        "symbol":  "TSLA",
+        "side":  "BUY",
+        "quantity":  1350,
+        "price":  195.46,
+        "trader":  "MJONES",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T09:14:26.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:14:26.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100004",
+        "symbol":  "NVDA",
+        "side":  "BUY",
+        "quantity":  1900,
+        "price":  142.19,
+        "trader":  "LNG",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T09:21:39.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:21:39.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100005",
+        "symbol":  "AMZN",
+        "side":  "SELL",
+        "quantity":  1800,
+        "price":  179.92,
+        "trader":  "PKHAN",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Bank of America",
+        "tradeTimestamp":  "2026-08-18T09:28:52.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:28:52.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100006",
+        "symbol":  "GOOG",
+        "side":  "BUY",
+        "quantity":  1850,
+        "price":  126.65,
+        "trader":  "RLEE",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "UBS",
+        "tradeTimestamp":  "2026-08-18T09:35:05.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:35:05.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100007",
+        "symbol":  "META",
+        "side":  "BUY",
+        "quantity":  2400,
+        "price":  160,
+        "trader":  "TCLARK",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Barclays",
+        "tradeTimestamp":  "2026-08-18T09:42:18.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:42:18.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100008",
+        "symbol":  "NFLX",
+        "side":  "SELL",
+        "quantity":  2300,
+        "price":  197.73,
+        "trader":  "HNGUYEN",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "Deutsche Bank",
+        "tradeTimestamp":  "2026-08-18T09:49:31.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:49:31.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100009",
+        "symbol":  "AMD",
+        "side":  "BUY",
+        "quantity":  2850,
+        "price":  144.46,
+        "trader":  "ASINGH",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Wells Fargo",
+        "tradeTimestamp":  "2026-08-18T09:56:44.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:56:44.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100010",
+        "symbol":  "INTC",
+        "side":  "BUY",
+        "quantity":  1150,
+        "price":  182.19,
+        "trader":  "MROBINSON",
+        "book":  "HEALTHCARE",
+        "counterparty":  "HSBC",
+        "tradeTimestamp":  "2026-08-18T09:03:57.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T09:03:57.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100011",
+        "symbol":  "CRM",
+        "side":  "SELL",
+        "quantity":  550,
+        "price":  128.92,
+        "trader":  "CJOHNSON",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Credit Suisse",
+        "tradeTimestamp":  "2026-08-18T10:10:10.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:10:10.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100012",
+        "symbol":  "IBM",
+        "side":  "BUY",
+        "quantity":  1100,
+        "price":  166.65,
+        "trader":  "DNG",
+        "book":  "EQUITIES_US",
+        "counterparty":  "Bloomberg Trade Desk",
+        "tradeTimestamp":  "2026-08-18T10:17:23.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:17:23.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100013",
+        "symbol":  "ORCL",
+        "side":  "BUY",
+        "quantity":  1650,
+        "price":  200,
+        "trader":  "JSMITH",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T10:24:36.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:24:36.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100014",
+        "symbol":  "SAP",
+        "side":  "SELL",
+        "quantity":  1550,
+        "price":  146.73,
+        "trader":  "ABROWN",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T10:31:49.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:31:49.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100015",
+        "symbol":  "UBER",
+        "side":  "BUY",
+        "quantity":  2100,
+        "price":  184.46,
+        "trader":  "MJONES",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T10:38:02.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:38:02.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100016",
+        "symbol":  "DIS",
+        "side":  "BUY",
+        "quantity":  2150,
+        "price":  131.19,
+        "trader":  "LNG",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T10:45:15.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:45:15.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100017",
+        "symbol":  "SHOP",
+        "side":  "SELL",
+        "quantity":  2700,
+        "price":  168.92,
+        "trader":  "PKHAN",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Bank of America",
+        "tradeTimestamp":  "2026-08-18T10:52:28.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:52:28.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100018",
+        "symbol":  "PYPL",
+        "side":  "BUY",
+        "quantity":  2600,
+        "price":  206.65,
+        "trader":  "RLEE",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "UBS",
+        "tradeTimestamp":  "2026-08-18T10:59:41.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:59:41.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100019",
+        "symbol":  "AVGO",
+        "side":  "BUY",
+        "quantity":  900,
+        "price":  149,
+        "trader":  "TCLARK",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Barclays",
+        "tradeTimestamp":  "2026-08-18T10:06:54.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:06:54.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100020",
+        "symbol":  "QCOM",
+        "side":  "SELL",
+        "quantity":  1450,
+        "price":  186.73,
+        "trader":  "HNGUYEN",
+        "book":  "HEALTHCARE",
+        "counterparty":  "Deutsche Bank",
+        "tradeTimestamp":  "2026-08-18T10:13:07.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T10:13:07.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100021",
+        "symbol":  "AAPL",
+        "side":  "BUY",
+        "quantity":  850,
+        "price":  133.46,
+        "trader":  "ASINGH",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Wells Fargo",
+        "tradeTimestamp":  "2026-08-18T11:20:20.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:20:20.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100022",
+        "symbol":  "MSFT",
+        "side":  "BUY",
+        "quantity":  1400,
+        "price":  171.19,
+        "trader":  "MROBINSON",
+        "book":  "EQUITIES_US",
+        "counterparty":  "HSBC",
+        "tradeTimestamp":  "2026-08-18T11:27:33.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:27:33.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100023",
+        "symbol":  "TSLA",
+        "side":  "SELL",
+        "quantity":  1950,
+        "price":  208.92,
+        "trader":  "CJOHNSON",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Credit Suisse",
+        "tradeTimestamp":  "2026-08-18T11:34:46.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:34:46.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100024",
+        "symbol":  "NVDA",
+        "side":  "BUY",
+        "quantity":  1850,
+        "price":  155.65,
+        "trader":  "DNG",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "Bloomberg Trade Desk",
+        "tradeTimestamp":  "2026-08-18T11:41:59.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:41:59.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100025",
+        "symbol":  "AMZN",
+        "side":  "BUY",
+        "quantity":  2400,
+        "price":  189,
+        "trader":  "JSMITH",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T11:48:12.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:48:12.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100026",
+        "symbol":  "GOOG",
+        "side":  "SELL",
+        "quantity":  2450,
+        "price":  135.73,
+        "trader":  "ABROWN",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T11:55:25.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:55:25.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100027",
+        "symbol":  "META",
+        "side":  "BUY",
+        "quantity":  2350,
+        "price":  173.46,
+        "trader":  "MJONES",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T11:02:38.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:02:38.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100028",
+        "symbol":  "NFLX",
+        "side":  "BUY",
+        "quantity":  650,
+        "price":  211.19,
+        "trader":  "LNG",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T11:09:51.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:09:51.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100029",
+        "symbol":  "AMD",
+        "side":  "SELL",
+        "quantity":  1200,
+        "price":  157.92,
+        "trader":  "PKHAN",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Bank of America",
+        "tradeTimestamp":  "2026-08-18T11:16:04.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:16:04.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100030",
+        "symbol":  "INTC",
+        "side":  "BUY",
+        "quantity":  1750,
+        "price":  195.65,
+        "trader":  "RLEE",
+        "book":  "HEALTHCARE",
+        "counterparty":  "UBS",
+        "tradeTimestamp":  "2026-08-18T11:23:17.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T11:23:17.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100031",
+        "symbol":  "CRM",
+        "side":  "BUY",
+        "quantity":  1150,
+        "price":  138,
+        "trader":  "TCLARK",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Barclays",
+        "tradeTimestamp":  "2026-08-18T12:30:30.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:30:30.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100032",
+        "symbol":  "IBM",
+        "side":  "SELL",
+        "quantity":  1700,
+        "price":  175.73,
+        "trader":  "HNGUYEN",
+        "book":  "EQUITIES_US",
+        "counterparty":  "Deutsche Bank",
+        "tradeTimestamp":  "2026-08-18T12:37:43.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:37:43.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100033",
+        "symbol":  "ORCL",
+        "side":  "BUY",
+        "quantity":  2250,
+        "price":  122.46,
+        "trader":  "ASINGH",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Wells Fargo",
+        "tradeTimestamp":  "2026-08-18T12:44:56.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:44:56.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100034",
+        "symbol":  "SAP",
+        "side":  "BUY",
+        "quantity":  2150,
+        "price":  160.19,
+        "trader":  "MROBINSON",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "HSBC",
+        "tradeTimestamp":  "2026-08-18T12:51:09.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:51:09.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100035",
+        "symbol":  "UBER",
+        "side":  "SELL",
+        "quantity":  2700,
+        "price":  197.92,
+        "trader":  "CJOHNSON",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Credit Suisse",
+        "tradeTimestamp":  "2026-08-18T12:58:22.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:58:22.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100036",
+        "symbol":  "DIS",
+        "side":  "BUY",
+        "quantity":  2750,
+        "price":  144.65,
+        "trader":  "DNG",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "Bloomberg Trade Desk",
+        "tradeTimestamp":  "2026-08-18T12:05:35.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:05:35.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100037",
+        "symbol":  "SHOP",
+        "side":  "BUY",
+        "quantity":  400,
+        "price":  178,
+        "trader":  "JSMITH",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T12:12:48.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:12:48.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100038",
+        "symbol":  "PYPL",
+        "side":  "SELL",
+        "quantity":  950,
+        "price":  124.73,
+        "trader":  "ABROWN",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T12:19:01.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:19:01.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100039",
+        "symbol":  "AVGO",
+        "side":  "BUY",
+        "quantity":  1500,
+        "price":  162.46,
+        "trader":  "MJONES",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T12:26:14.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:26:14.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100040",
+        "symbol":  "QCOM",
+        "side":  "BUY",
+        "quantity":  1400,
+        "price":  200.19,
+        "trader":  "LNG",
+        "book":  "HEALTHCARE",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T12:33:27.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T12:33:27.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100041",
+        "symbol":  "AAPL",
+        "side":  "SELL",
+        "quantity":  1450,
+        "price":  146.92,
+        "trader":  "PKHAN",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Bank of America",
+        "tradeTimestamp":  "2026-08-18T13:40:40.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:40:40.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100042",
+        "symbol":  "MSFT",
+        "side":  "BUY",
+        "quantity":  2000,
+        "price":  184.65,
+        "trader":  "RLEE",
+        "book":  "EQUITIES_US",
+        "counterparty":  "UBS",
+        "tradeTimestamp":  "2026-08-18T13:47:53.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:47:53.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100043",
+        "symbol":  "TSLA",
+        "side":  "BUY",
+        "quantity":  2550,
+        "price":  127,
+        "trader":  "TCLARK",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Barclays",
+        "tradeTimestamp":  "2026-08-18T13:54:06.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:54:06.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100044",
+        "symbol":  "NVDA",
+        "side":  "SELL",
+        "quantity":  2450,
+        "price":  164.73,
+        "trader":  "HNGUYEN",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "Deutsche Bank",
+        "tradeTimestamp":  "2026-08-18T13:01:19.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:01:19.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100045",
+        "symbol":  "AMZN",
+        "side":  "BUY",
+        "quantity":  3000,
+        "price":  202.46,
+        "trader":  "ASINGH",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Wells Fargo",
+        "tradeTimestamp":  "2026-08-18T13:08:32.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:08:32.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100046",
+        "symbol":  "GOOG",
+        "side":  "BUY",
+        "quantity":  800,
+        "price":  149.19,
+        "trader":  "MROBINSON",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "HSBC",
+        "tradeTimestamp":  "2026-08-18T13:15:45.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:15:45.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100047",
+        "symbol":  "META",
+        "side":  "SELL",
+        "quantity":  700,
+        "price":  186.92,
+        "trader":  "CJOHNSON",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Credit Suisse",
+        "tradeTimestamp":  "2026-08-18T13:22:58.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:22:58.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100048",
+        "symbol":  "NFLX",
+        "side":  "BUY",
+        "quantity":  1250,
+        "price":  133.65,
+        "trader":  "DNG",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "Bloomberg Trade Desk",
+        "tradeTimestamp":  "2026-08-18T13:29:11.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:29:11.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100049",
+        "symbol":  "AMD",
+        "side":  "BUY",
+        "quantity":  1800,
+        "price":  167,
+        "trader":  "JSMITH",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T13:36:24.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:36:24.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100050",
+        "symbol":  "INTC",
+        "side":  "SELL",
+        "quantity":  1700,
+        "price":  204.73,
+        "trader":  "ABROWN",
+        "book":  "HEALTHCARE",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T13:43:37.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T13:43:37.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100051",
+        "symbol":  "CRM",
+        "side":  "BUY",
+        "quantity":  1750,
+        "price":  151.46,
+        "trader":  "MJONES",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T14:50:50.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:50:50.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100052",
+        "symbol":  "IBM",
+        "side":  "BUY",
+        "quantity":  2300,
+        "price":  189.19,
+        "trader":  "LNG",
+        "book":  "EQUITIES_US",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T14:57:03.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:57:03.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100053",
+        "symbol":  "ORCL",
+        "side":  "SELL",
+        "quantity":  2200,
+        "price":  135.92,
+        "trader":  "PKHAN",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Bank of America",
+        "tradeTimestamp":  "2026-08-18T14:04:16.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:04:16.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100054",
+        "symbol":  "SAP",
+        "side":  "BUY",
+        "quantity":  2750,
+        "price":  173.65,
+        "trader":  "RLEE",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "UBS",
+        "tradeTimestamp":  "2026-08-18T14:11:29.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:11:29.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100055",
+        "symbol":  "UBER",
+        "side":  "BUY",
+        "quantity":  1050,
+        "price":  207,
+        "trader":  "TCLARK",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Barclays",
+        "tradeTimestamp":  "2026-08-18T14:18:42.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:18:42.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100056",
+        "symbol":  "DIS",
+        "side":  "SELL",
+        "quantity":  1100,
+        "price":  153.73,
+        "trader":  "HNGUYEN",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "Deutsche Bank",
+        "tradeTimestamp":  "2026-08-18T14:25:55.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:25:55.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100057",
+        "symbol":  "SHOP",
+        "side":  "BUY",
+        "quantity":  1000,
+        "price":  191.46,
+        "trader":  "ASINGH",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Wells Fargo",
+        "tradeTimestamp":  "2026-08-18T14:32:08.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:32:08.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100058",
+        "symbol":  "PYPL",
+        "side":  "BUY",
+        "quantity":  1550,
+        "price":  138.19,
+        "trader":  "MROBINSON",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "HSBC",
+        "tradeTimestamp":  "2026-08-18T14:39:21.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:39:21.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100059",
+        "symbol":  "AVGO",
+        "side":  "SELL",
+        "quantity":  2100,
+        "price":  175.92,
+        "trader":  "CJOHNSON",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Credit Suisse",
+        "tradeTimestamp":  "2026-08-18T14:46:34.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:46:34.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100060",
+        "symbol":  "QCOM",
+        "side":  "BUY",
+        "quantity":  2000,
+        "price":  213.65,
+        "trader":  "DNG",
+        "book":  "HEALTHCARE",
+        "counterparty":  "Bloomberg Trade Desk",
+        "tradeTimestamp":  "2026-08-18T14:53:47.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T14:53:47.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100061",
+        "symbol":  "AAPL",
+        "side":  "BUY",
+        "quantity":  2050,
+        "price":  156,
+        "trader":  "JSMITH",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T15:00:00.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:00:00.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100062",
+        "symbol":  "MSFT",
+        "side":  "SELL",
+        "quantity":  2600,
+        "price":  193.73,
+        "trader":  "ABROWN",
+        "book":  "EQUITIES_US",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T15:07:13.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:07:13.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100063",
+        "symbol":  "TSLA",
+        "side":  "BUY",
+        "quantity":  2500,
+        "price":  140.46,
+        "trader":  "MJONES",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T15:14:26.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:14:26.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100064",
+        "symbol":  "NVDA",
+        "side":  "BUY",
+        "quantity":  800,
+        "price":  178.19,
+        "trader":  "LNG",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T15:21:39.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:21:39.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100065",
+        "symbol":  "AMZN",
+        "side":  "SELL",
+        "quantity":  1350,
+        "price":  124.92,
+        "trader":  "PKHAN",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Bank of America",
+        "tradeTimestamp":  "2026-08-18T15:28:52.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:28:52.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100066",
+        "symbol":  "GOOG",
+        "side":  "BUY",
+        "quantity":  750,
+        "price":  162.65,
+        "trader":  "RLEE",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "UBS",
+        "tradeTimestamp":  "2026-08-18T15:35:05.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:35:05.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100067",
+        "symbol":  "META",
+        "side":  "BUY",
+        "quantity":  1300,
+        "price":  196,
+        "trader":  "TCLARK",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Barclays",
+        "tradeTimestamp":  "2026-08-18T15:42:18.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:42:18.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100068",
+        "symbol":  "NFLX",
+        "side":  "SELL",
+        "quantity":  1850,
+        "price":  142.73,
+        "trader":  "HNGUYEN",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "Deutsche Bank",
+        "tradeTimestamp":  "2026-08-18T15:49:31.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:49:31.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100069",
+        "symbol":  "AMD",
+        "side":  "BUY",
+        "quantity":  2400,
+        "price":  180.46,
+        "trader":  "ASINGH",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Wells Fargo",
+        "tradeTimestamp":  "2026-08-18T15:56:44.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:56:44.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100070",
+        "symbol":  "INTC",
+        "side":  "BUY",
+        "quantity":  2300,
+        "price":  127.19,
+        "trader":  "MROBINSON",
+        "book":  "HEALTHCARE",
+        "counterparty":  "HSBC",
+        "tradeTimestamp":  "2026-08-18T15:03:57.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T15:03:57.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100071",
+        "symbol":  "CRM",
+        "side":  "SELL",
+        "quantity":  2350,
+        "price":  164.92,
+        "trader":  "CJOHNSON",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Credit Suisse",
+        "tradeTimestamp":  "2026-08-18T16:10:10.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:10:10.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100072",
+        "symbol":  "IBM",
+        "side":  "BUY",
+        "quantity":  2900,
+        "price":  202.65,
+        "trader":  "DNG",
+        "book":  "EQUITIES_US",
+        "counterparty":  "Bloomberg Trade Desk",
+        "tradeTimestamp":  "2026-08-18T16:17:23.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:17:23.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100073",
+        "symbol":  "ORCL",
+        "side":  "BUY",
+        "quantity":  550,
+        "price":  145,
+        "trader":  "JSMITH",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T16:24:36.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:24:36.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100074",
+        "symbol":  "SAP",
+        "side":  "SELL",
+        "quantity":  1100,
+        "price":  182.73,
+        "trader":  "ABROWN",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T16:31:49.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:31:49.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100075",
+        "symbol":  "UBER",
+        "side":  "BUY",
+        "quantity":  1650,
+        "price":  129.46,
+        "trader":  "MJONES",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T16:38:02.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:38:02.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100076",
+        "symbol":  "DIS",
+        "side":  "BUY",
+        "quantity":  1050,
+        "price":  167.19,
+        "trader":  "LNG",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T16:45:15.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:45:15.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100077",
+        "symbol":  "SHOP",
+        "side":  "SELL",
+        "quantity":  1600,
+        "price":  204.92,
+        "trader":  "PKHAN",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Bank of America",
+        "tradeTimestamp":  "2026-08-18T16:52:28.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:52:28.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100078",
+        "symbol":  "PYPL",
+        "side":  "BUY",
+        "quantity":  2150,
+        "price":  151.65,
+        "trader":  "RLEE",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "UBS",
+        "tradeTimestamp":  "2026-08-18T16:59:41.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:59:41.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100079",
+        "symbol":  "AVGO",
+        "side":  "BUY",
+        "quantity":  2050,
+        "price":  185,
+        "trader":  "TCLARK",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Barclays",
+        "tradeTimestamp":  "2026-08-18T16:06:54.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:06:54.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100080",
+        "symbol":  "QCOM",
+        "side":  "SELL",
+        "quantity":  2600,
+        "price":  131.73,
+        "trader":  "HNGUYEN",
+        "book":  "HEALTHCARE",
+        "counterparty":  "Deutsche Bank",
+        "tradeTimestamp":  "2026-08-18T16:13:07.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T16:13:07.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100081",
+        "symbol":  "AAPL",
+        "side":  "BUY",
+        "quantity":  2650,
+        "price":  169.46,
+        "trader":  "ASINGH",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Wells Fargo",
+        "tradeTimestamp":  "2026-08-18T17:20:20.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:20:20.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100082",
+        "symbol":  "MSFT",
+        "side":  "BUY",
+        "quantity":  950,
+        "price":  207.19,
+        "trader":  "MROBINSON",
+        "book":  "EQUITIES_US",
+        "counterparty":  "HSBC",
+        "tradeTimestamp":  "2026-08-18T17:27:33.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:27:33.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100083",
+        "symbol":  "TSLA",
+        "side":  "SELL",
+        "quantity":  850,
+        "price":  153.92,
+        "trader":  "CJOHNSON",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Credit Suisse",
+        "tradeTimestamp":  "2026-08-18T17:34:46.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:34:46.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100084",
+        "symbol":  "NVDA",
+        "side":  "BUY",
+        "quantity":  1400,
+        "price":  191.65,
+        "trader":  "DNG",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "Bloomberg Trade Desk",
+        "tradeTimestamp":  "2026-08-18T17:41:59.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:41:59.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100085",
+        "symbol":  "AMZN",
+        "side":  "BUY",
+        "quantity":  1950,
+        "price":  134,
+        "trader":  "JSMITH",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T17:48:12.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:48:12.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100086",
+        "symbol":  "GOOG",
+        "side":  "SELL",
+        "quantity":  1350,
+        "price":  171.73,
+        "trader":  "ABROWN",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T17:55:25.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:55:25.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100087",
+        "symbol":  "META",
+        "side":  "BUY",
+        "quantity":  1900,
+        "price":  209.46,
+        "trader":  "MJONES",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T17:02:38.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:02:38.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100088",
+        "symbol":  "NFLX",
+        "side":  "BUY",
+        "quantity":  2450,
+        "price":  156.19,
+        "trader":  "LNG",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T17:09:51.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:09:51.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100089",
+        "symbol":  "AMD",
+        "side":  "SELL",
+        "quantity":  2350,
+        "price":  193.92,
+        "trader":  "PKHAN",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Bank of America",
+        "tradeTimestamp":  "2026-08-18T17:16:04.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:16:04.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100090",
+        "symbol":  "INTC",
+        "side":  "BUY",
+        "quantity":  2900,
+        "price":  140.65,
+        "trader":  "RLEE",
+        "book":  "HEALTHCARE",
+        "counterparty":  "UBS",
+        "tradeTimestamp":  "2026-08-18T17:23:17.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T17:23:17.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100091",
+        "symbol":  "CRM",
+        "side":  "BUY",
+        "quantity":  700,
+        "price":  174,
+        "trader":  "TCLARK",
+        "book":  "EQUITIES_UK",
+        "counterparty":  "Barclays",
+        "tradeTimestamp":  "2026-08-18T18:30:30.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:30:30.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100092",
+        "symbol":  "IBM",
+        "side":  "SELL",
+        "quantity":  600,
+        "price":  120.73,
+        "trader":  "HNGUYEN",
+        "book":  "EQUITIES_US",
+        "counterparty":  "Deutsche Bank",
+        "tradeTimestamp":  "2026-08-18T18:37:43.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:37:43.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100093",
+        "symbol":  "ORCL",
+        "side":  "BUY",
+        "quantity":  1150,
+        "price":  158.46,
+        "trader":  "ASINGH",
+        "book":  "TECH_GROWTH",
+        "counterparty":  "Wells Fargo",
+        "tradeTimestamp":  "2026-08-18T18:44:56.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:44:56.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100094",
+        "symbol":  "SAP",
+        "side":  "BUY",
+        "quantity":  1700,
+        "price":  196.19,
+        "trader":  "MROBINSON",
+        "book":  "SEMICONDUCTORS",
+        "counterparty":  "HSBC",
+        "tradeTimestamp":  "2026-08-18T18:51:09.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:51:09.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100095",
+        "symbol":  "UBER",
+        "side":  "SELL",
+        "quantity":  2250,
+        "price":  142.92,
+        "trader":  "CJOHNSON",
+        "book":  "CONSUMER_DISCRETIONARY",
+        "counterparty":  "Credit Suisse",
+        "tradeTimestamp":  "2026-08-18T18:58:22.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:58:22.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100096",
+        "symbol":  "DIS",
+        "side":  "BUY",
+        "quantity":  1650,
+        "price":  180.65,
+        "trader":  "DNG",
+        "book":  "ALPHA_SEARCH",
+        "counterparty":  "Bloomberg Trade Desk",
+        "tradeTimestamp":  "2026-08-18T18:05:35.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:05:35.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100097",
+        "symbol":  "SHOP",
+        "side":  "BUY",
+        "quantity":  2200,
+        "price":  123,
+        "trader":  "JSMITH",
+        "book":  "DIGITAL_MEDIA",
+        "counterparty":  "Goldman Sachs",
+        "tradeTimestamp":  "2026-08-18T18:12:48.000Z",
+        "status":  "ACTIVE",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:12:48.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100098",
+        "symbol":  "PYPL",
+        "side":  "SELL",
+        "quantity":  2750,
+        "price":  160.73,
+        "trader":  "ABROWN",
+        "book":  "ENTERTAINMENT",
+        "counterparty":  "JP Morgan",
+        "tradeTimestamp":  "2026-08-18T18:19:01.000Z",
+        "status":  "PENDING",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:19:01.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100099",
+        "symbol":  "AVGO",
+        "side":  "BUY",
+        "quantity":  2650,
+        "price":  198.46,
+        "trader":  "MJONES",
+        "book":  "AI_MOBILE",
+        "counterparty":  "Morgan Stanley",
+        "tradeTimestamp":  "2026-08-18T18:26:14.000Z",
+        "status":  "CANCELLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:26:14.0000000Z"
+                      }
+    },
+    {
+        "tradeId":  "TRD-100100",
+        "symbol":  "QCOM",
+        "side":  "BUY",
+        "quantity":  950,
+        "price":  145.19,
+        "trader":  "LNG",
+        "book":  "HEALTHCARE",
+        "counterparty":  "Citigroup",
+        "tradeTimestamp":  "2026-08-18T18:33:27.000Z",
+        "status":  "SETTLED",
+        "timestamp":  {
+                          "$date":  "2026-08-18T18:33:27.0000000Z"
+                      }
+    }
+]

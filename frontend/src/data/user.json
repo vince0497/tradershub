@@ -1,0 +1,20 @@
+[
+    {
+        "email": "andrew@example.com",
+        "username": "andrew@example.com",
+        "passwordHash": "$2b$12$TllbscozeS74A7wrMk/0NuTIFwLbMCg/P99zEph9p.9im5F1byhOS",
+        "createdAt": { "$date": "2026-08-18T09:15:23Z" }
+    },
+    {
+        "email": "peterparker@example.com",
+        "username": "peterparker@example.com",
+        "passwordHash": "$2b$12$Cb5N6zAKdd8v1MDKlgwOO.nVG4f8kjoDVSwLBd8NC.EiKz00GXkLa",
+        "createdAt": { "$date": "2026-08-18T09:15:23Z" }
+    },
+    {
+        "email": "galgadot@example.com",
+        "username": "galgadot@example.com",
+        "passwordHash": "$2b$12$UASr8dXLKmiOZ6M.tUVWUOiiSttjt4l/X8zaQHSX/gxTNeb158HTS",
+        "createdAt": { "$date": "2026-08-18T09:15:23Z" }
+    }
+]
