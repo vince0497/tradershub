@@ -8,11 +8,18 @@ const bcrypt = require('bcrypt');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const { Server } = require('socket.io');
 
+const FRONTEND_ORIGINS = (process.env.FRONTEND_URL || 'http://localhost:5173')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+const isAllowedOrigin = (origin) => !origin || FRONTEND_ORIGINS.includes(origin);
+
 const app = express();
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.FRONTEND_URL || '*',
+    origin: (origin, callback) => callback(null, isAllowedOrigin(origin) ? origin : false),
+    credentials: true,
   },
 });
 const PORT = process.env.PORT || 5000;
@@ -26,7 +33,7 @@ let client = null;
 let db = null;
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: (origin, callback) => callback(null, isAllowedOrigin(origin) ? origin : false),
   credentials: true,
 }));
 app.use(express.json());
