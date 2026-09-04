@@ -40,6 +40,12 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
     try {
       const response = await fetch(`${API_BASE_URL}/api/trades`, { credentials: 'include' });
 
+      if (response.status === 401) {
+        setUser(null);
+        navigate('/login', { replace: true });
+        return;
+      }
+
       if (!response.ok) {
         throw new Error('Failed to fetch trades');
       }
