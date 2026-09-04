@@ -44,7 +44,7 @@ const UserAuthProvider: React.FunctionComponent<IUserAuthProviderProps> = ({ chi
           setUser(null);
           return;
         }
-        const data = await response.json() as { user: AuthUser };
+        const data = await response.json() as { user: AuthUser | null };
         setUser(data.user);
       })
       .catch(() => setUser(null))

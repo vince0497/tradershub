@@ -227,7 +227,9 @@ app.post('/api/auth/login', async (req, res) => {
 app.get('/api/auth/me', async (req, res) => {
   try {
     const user = await getUserFromSession(req);
-    return user ? res.json({ user: { id: user._id.toString(), username: user.username, email: user.email } }) : res.status(401).json({ message: 'Not authenticated.' });
+    return user
+      ? res.json({ user: { id: user._id.toString(), username: user.username, email: user.email } })
+      : res.json({ user: null });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
