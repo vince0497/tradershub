@@ -73,13 +73,13 @@ const LogIn: React.FunctionComponent<ILogInProps> = () => {
 
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="login-input">
-            <label htmlFor="username-input">Username</label>
+            <label htmlFor="username-input">Username or email</label>
             <input
               id="username-input"
               type="text"
               value={username}
               onChange={(event) => setUsername(event.target.value)}
-              placeholder="Enter username"
+              placeholder="Enter username or email"
               autoComplete="username"
               required
             />
