@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import type { SortDirection, SortKey, Trade } from '@/types';
 import DeleteTrade from '@/components/modal/deleteTrade';
 import UpdateTrade from '@/components/modal/updateTrade';
+import { useAuth } from '@/context/userAuthContext';
 
 interface ITradeListProps {
   trades: Trade[];
@@ -27,6 +28,7 @@ const formatTime = (value: string) => {
 };
 
 const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteTrade, onUpdateTrade }) => {
+  const { user } = useAuth();
   const [currentPage, setCurrentPage] = useState(1);
   const [sortKey, setSortKey] = useState<SortKey>('symbol');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
@@ -83,6 +85,7 @@ const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteT
   const endIndex = Math.min(currentPageSafe * pageSize, sortedTrades.length);
 
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+  const currentUserEmail = user?.email?.toLowerCase();
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -180,15 +183,24 @@ const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteT
                         </td>
                         <td className="time-cell">{trade.time}</td>
                         <td className="trader-cell">{trade.trader}</td>
-                        <td className="action-cell">
-                          <DeleteTrade
-                            symbol={trade.symbol}
-                            onConfirm={() => onDeleteTrade(trade.tradeId)}
-                          />
-                        </td>
-                        <td className="action-cell">
-                          <UpdateTrade trade={trade.originalTrade} onConfirm={onUpdateTrade} />
-                        </td>
+                        {trade.trader.toLowerCase() === currentUserEmail ? (
+                          <>
+                            <td className="action-cell">
+                              <DeleteTrade
+                                symbol={trade.symbol}
+                                onConfirm={() => onDeleteTrade(trade.tradeId)}
+                              />
+                            </td>
+                            <td className="action-cell">
+                              <UpdateTrade trade={trade.originalTrade} onConfirm={onUpdateTrade} />
+                            </td>
+                          </>
+                        ) : (
+                          <>
+                            <td className="action-cell" />
+                            <td className="action-cell" />
+                          </>
+                        )}
                       </tr>
                     ))
                   ) : (

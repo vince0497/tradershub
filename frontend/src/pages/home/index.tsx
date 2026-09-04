@@ -18,6 +18,8 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
   const [symbol, setSymbol] = useState('AAPL');
   const [quantity, setQuantity] = useState('100');
   const [price, setPrice] = useState('200');
+  const [book, setBook] = useState('US_EQUITIES');
+  const [counterparty, setCounterparty] = useState('Goldman Sachs');
   const trader = user?.email ?? '';
 
   const handleLogout = async () => {
@@ -80,8 +82,10 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
     const cleanQuantity = Number(quantity);
     const cleanPrice = Number(price);
     const cleanTrader = trader.trim();
+    const cleanBook = book.trim();
+    const cleanCounterparty = counterparty.trim();
 
-    if (!cleanSymbol || !quantity.trim() || !price.trim() || !cleanTrader) {
+    if (!cleanSymbol || !quantity.trim() || !price.trim() || !cleanTrader || !cleanBook || !cleanCounterparty) {
       toast.add({
         title: 'Incomplete order',
         description: 'Please provide a value for every field.',
@@ -106,8 +110,8 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
       quantity: cleanQuantity,
       price: cleanPrice,
       trader: cleanTrader,
-      book: 'PRIMARY',
-      counterparty: 'CLIENT',
+      book: cleanBook,
+      counterparty: cleanCounterparty,
       tradeTimestamp: new Date().toISOString(),
       status: 'NEW',
     };
@@ -132,10 +136,16 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
       setSymbol('');
       setQuantity('');
       setPrice('');
+      setBook('');
+      setCounterparty('');
       console.log('Trade created:', result);
     } catch (error) {
       console.error('Error creating trade:', error);
-      alert('Unable to create trade. Check backend and MongoDB connection.');
+      toast.add({
+        title: 'Unable to create trade',
+        description: 'Check the backend and MongoDB connection.',
+        type: 'error',
+      });
     }
   };
 
@@ -154,7 +164,11 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
       setTrades((prev) => prev.filter((trade) => trade.tradeId !== tradeId));
     } catch (error) {
       console.error('Error deleting trade:', error);
-      alert('Unable to delete trade. Check backend and MongoDB connection.');
+      toast.add({
+        title: 'Unable to delete trade',
+        description: 'Check the backend and MongoDB connection.',
+        type: 'error',
+      });
       throw error;
     }
   };
@@ -177,7 +191,11 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
       setTrades((prev) => prev.map((trade) => trade.tradeId === result.trade.tradeId ? result.trade : trade));
     } catch (error) {
       console.error('Error updating trade:', error);
-      alert('Unable to update trade. Check backend and MongoDB connection.');
+      toast.add({
+        title: 'Unable to update trade',
+        description: 'Check the backend and MongoDB connection.',
+        type: 'error',
+      });
       throw error;
     }
   };
@@ -255,6 +273,32 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
                 placeholder="Current user email"
                 aria-label="Trader"
                 readOnly
+                style={{ color: 'white' }}
+              />
+            </div>
+
+            <div className="order-input">
+              <label htmlFor="book-input" style={{ color: 'white' }}>Book</label>
+              <input
+                id="book-input"
+                type="text"
+                value={book}
+                onChange={(event) => setBook(event.target.value)}
+                placeholder="Enter book"
+                aria-label="Enter book"
+                style={{ color: 'white' }}
+              />
+            </div>
+
+            <div className="order-input">
+              <label htmlFor="counterparty-input" style={{ color: 'white' }}>Counterparty</label>
+              <input
+                id="counterparty-input"
+                type="text"
+                value={counterparty}
+                onChange={(event) => setCounterparty(event.target.value)}
+                placeholder="Enter counterparty"
+                aria-label="Enter counterparty"
                 style={{ color: 'white' }}
               />
             </div>

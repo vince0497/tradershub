@@ -12,6 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Pencil } from 'lucide-react';
 import type { Trade } from '@/types';
+import { toast } from '@/components/ui/toast';
 
 interface IUpdateTradeProps {
   trade: Trade;
@@ -60,7 +61,11 @@ const UpdateTrade: React.FunctionComponent<IUpdateTradeProps> = ({ trade, onConf
     const price = Number(form.price);
 
     if (!symbol || !Number.isFinite(quantity) || quantity <= 0 || !Number.isFinite(price) || price <= 0) {
-      alert('Please enter a valid symbol, quantity, and price.');
+      toast.add({
+        title: 'Invalid trade values',
+        description: 'Please enter a valid symbol, quantity, and price.',
+        type: 'error',
+      });
       return;
     }
 

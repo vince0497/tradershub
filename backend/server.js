@@ -259,6 +259,7 @@ app.post('/api/trades', requireAuth, async (req, res) => {
 
     const trade = {
       ...req.body,
+      trader: req.user.email || req.user.username,
       timestamp: normalizeTradeTimestamp(req.body.timestamp ?? req.body.tradeTimestamp),
       tradeTimestamp: normalizeTradeTimestamp(req.body.tradeTimestamp ?? req.body.timestamp),
     };
@@ -285,7 +286,10 @@ app.delete('/api/trades/:tradeId', requireAuth, async (req, res) => {
       });
     }
 
-    const result = await tradesCollection.deleteOne({ tradeId: req.params.tradeId });
+    const result = await tradesCollection.deleteOne({
+      tradeId: req.params.tradeId,
+      trader: req.user.email || req.user.username,
+    });
 
     if (result.deletedCount === 0) {
       return res.status(404).json({ message: 'Trade not found.' });
@@ -312,14 +316,23 @@ app.put('/api/trades/:tradeId', requireAuth, async (req, res) => {
     const trade = {
       ...updates,
       tradeId: req.params.tradeId,
+      trader: req.user.email || req.user.username,
       timestamp: normalizeTradeTimestamp(timestamp ?? tradeTimestamp),
       tradeTimestamp: normalizeTradeTimestamp(tradeTimestamp ?? timestamp),
     };
-    const result = await tradesCollection.replaceOne({ tradeId: req.params.tradeId }, trade);
+    const existingTrade = await tradesCollection.findOne({
+      tradeId: req.params.tradeId,
+      trader: req.user.email || req.user.username,
+    });
 
-    if (result.matchedCount === 0) {
+    if (!existingTrade) {
       return res.status(404).json({ message: 'Trade not found.' });
     }
+
+    // Time-series collections without a metaField cannot be updated. Insert the
+    // replacement first, then remove the previous version.
+    await tradesCollection.insertOne(trade);
+    await tradesCollection.deleteOne({ _id: existingTrade._id });
 
     io.emit('trade:updated', trade);
     return res.json({ message: 'Trade updated successfully.', trade });
