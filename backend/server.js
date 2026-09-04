@@ -16,6 +16,7 @@ const io = new Server(httpServer, {
   },
 });
 const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || '0.0.0.0';
 const MONGODB_URI = process.env.MONGODB_URI || '';
 const MONGODB_DB = process.env.MONGODB_DB || 'tradershub';
 const SESSION_COOKIE = 'tradershub_session';
@@ -344,8 +345,12 @@ app.put('/api/trades/:tradeId', requireAuth, async (req, res) => {
 async function startServer() {
   await connectToMongo();
 
-  httpServer.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+  httpServer.listen(PORT, HOST, () => {
+    const publicUrl = process.env.PROD_BACKEND_URL
+      || process.env.RENDER_EXTERNAL_URL
+      || (process.env.RAILWAY_PUBLIC_DOMAIN && `https://${process.env.RAILWAY_PUBLIC_DOMAIN}`)
+      || `http://localhost:${PORT}`;
+    console.log(`Server running on ${publicUrl}`);
   });
 }
 
