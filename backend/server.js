@@ -39,8 +39,12 @@ function parseCookies(request) {
 }
 
 function setSessionCookie(response, token, expires) {
-  const secure = process.env.NODE_ENV === 'production' ? '; Secure' : '';
-  response.setHeader('Set-Cookie', `${SESSION_COOKIE}=${encodeURIComponent(token)}; HttpOnly; Path=/; SameSite=Lax; Expires=${expires.toUTCString()}${secure}`);
+  const isProduction = process.env.NODE_ENV === 'production'
+    || process.env.RENDER_EXTERNAL_URL
+    || process.env.RAILWAY_PUBLIC_DOMAIN;
+  const sameSite = isProduction ? 'None' : 'Lax';
+  const secure = isProduction ? '; Secure' : '';
+  response.setHeader('Set-Cookie', `${SESSION_COOKIE}=${encodeURIComponent(token)}; HttpOnly; Path=/; SameSite=${sameSite}; Expires=${expires.toUTCString()}${secure}`);
 }
 
 async function getUserFromSession(request) {
