@@ -6,13 +6,12 @@ import type { Trade } from '@/types';
 import TradeList from '@/components/tradeList';
 import { toast } from '@/components/ui/toast';
 import { useAuth } from '@/context/userAuthContext';
+import { API_BASE_URL } from '@/lib/api';
 interface IHomeProps {}
-
-const API_BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:5000';
 
 const Home: React.FunctionComponent<IHomeProps> = () => {
   const navigate = useNavigate();
-  const { user, setUser } = useAuth();
+  const { user, setUser, getAuthHeaders } = useAuth();
   const [trades, setTrades] = useState<Trade[]>([]);
   const [loading, setLoading] = useState(true);
   const [symbol, setSymbol] = useState('AAPL');
@@ -27,6 +26,7 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
       await fetch(`${API_BASE_URL}/api/auth/logout`, {
         method: 'POST',
         credentials: 'include',
+        headers: getAuthHeaders(),
       });
     } catch (error) {
       console.error('Error logging out:', error);
@@ -38,7 +38,10 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
 
   const fetchTrades = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/trades`, { credentials: 'include' });
+      const response = await fetch(`${API_BASE_URL}/api/trades`, {
+        credentials: 'include',
+        headers: getAuthHeaders(),
+      });
 
       if (response.status === 401) {
         setUser(null);
@@ -128,6 +131,7 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
+          ...getAuthHeaders(),
         },
         body: JSON.stringify(tradePayload),
       });
@@ -160,6 +164,7 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
       const response = await fetch(`${API_BASE_URL}/api/trades/${encodeURIComponent(tradeId)}`, {
         method: 'DELETE',
         credentials: 'include',
+        headers: getAuthHeaders(),
       });
 
       if (!response.ok) {
@@ -184,7 +189,7 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
       const response = await fetch(`${API_BASE_URL}/api/trades/${encodeURIComponent(updatedTrade.tradeId)}`, {
         method: 'PUT',
         credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
         body: JSON.stringify(updatedTrade),
       });
 

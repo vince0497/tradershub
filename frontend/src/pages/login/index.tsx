@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from '@/components/ui/toast';
 import { useAuth } from '@/context/userAuthContext';
+import { API_BASE_URL } from '@/lib/api';
 
 interface ILogInProps {}
 
@@ -35,7 +36,7 @@ const LogIn: React.FunctionComponent<ILogInProps> = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL ?? 'http://localhost:5000'}/api/auth/login`, {
+      const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
@@ -47,8 +48,8 @@ const LogIn: React.FunctionComponent<ILogInProps> = () => {
         throw new Error(error.message || 'Unable to sign in.');
       }
 
-      const data = await response.json() as { user: { id: string; username: string; email?: string } };
-      setUser(data.user);
+      const data = await response.json() as { token: string; user: { id: string; username: string; email?: string } };
+      setUser(data.user, data.token);
       toast.add({ title: 'Signed in', description: 'Welcome back.', type: 'success' });
       const destination = (location.state as { from?: { pathname?: string } } | null)?.from?.pathname || '/';
       navigate(destination, { replace: true });

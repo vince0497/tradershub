@@ -8,10 +8,14 @@ const bcrypt = require('bcrypt');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const { Server } = require('socket.io');
 
-const FRONTEND_ORIGINS = (process.env.FRONTEND_URL || 'http://localhost:5173')
-  .split(',')
+const FRONTEND_ORIGINS = [
+  'http://localhost:5173',
+  'https://tradershub-teal.vercel.app',
+  ...(process.env.FRONTEND_URL || '').split(','),
+]
   .map((origin) => origin.trim())
-  .filter(Boolean);
+  .filter(Boolean)
+  .filter((origin, index, origins) => origins.indexOf(origin) === index);
 const isAllowedOrigin = (origin) => !origin || FRONTEND_ORIGINS.includes(origin);
 
 const app = express();
@@ -45,6 +49,14 @@ function parseCookies(request) {
   }));
 }
 
+function getSessionToken(request) {
+  const authorization = request.headers.authorization || '';
+  if (authorization.startsWith('Bearer ')) {
+    return authorization.slice(7);
+  }
+  return parseCookies(request)[SESSION_COOKIE];
+}
+
 function setSessionCookie(response, token, expires) {
   const isProduction = process.env.NODE_ENV === 'production'
     || process.env.RENDER_EXTERNAL_URL
@@ -59,7 +71,7 @@ async function getUserFromSession(request) {
     return null;
   }
 
-  const token = parseCookies(request)[SESSION_COOKIE];
+  const token = getSessionToken(request);
   if (!token) {
     return null;
   }
@@ -218,7 +230,10 @@ app.post('/api/auth/login', async (req, res) => {
     await db.collection('sessions').insertOne({ token, userId: user._id, expiresAt });
     setSessionCookie(res, token, expiresAt);
 
-    return res.json({ user: { id: user._id.toString(), username: user.username, email: user.email } });
+    return res.json({
+      token,
+      user: { id: user._id.toString(), username: user.username, email: user.email },
+    });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -236,7 +251,7 @@ app.get('/api/auth/me', async (req, res) => {
 });
 
 app.post('/api/auth/logout', async (req, res) => {
-  const token = parseCookies(req)[SESSION_COOKIE];
+  const token = getSessionToken(req);
   if (db && token) {
     await db.collection('sessions').deleteOne({ token });
   }
