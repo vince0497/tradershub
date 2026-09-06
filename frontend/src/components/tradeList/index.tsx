@@ -14,16 +14,15 @@ interface ITradeListProps {
 
 const pageSize = 8;
 
-const formatTime = (value: string) => {
+const formatDateTime = (value: string) => {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
     return value;
   }
 
-  return date.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
+  return date.toLocaleString([], {
+    dateStyle: 'medium',
+    timeStyle: 'medium',
   });
 };
 
@@ -41,9 +40,10 @@ const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteT
       tradeId: trade.tradeId,
       symbol: trade.symbol,
       side: trade.side,
-      quantity: trade.quantity.toLocaleString(),
+      quantity: trade.quantity,
       status: trade.status,
-      time: formatTime(trade.tradeTimestamp),
+      time: formatDateTime(trade.tradeTimestamp),
+      timeValue: new Date(trade.tradeTimestamp).getTime(),
       trader: trade.trader,
     }));
 
@@ -51,7 +51,7 @@ const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteT
 
     return rows.filter((trade) =>
       [trade.symbol, trade.side, trade.quantity, trade.status, trade.time, trade.trader].some((value) =>
-        value.toLowerCase().includes(query),
+        value.toString().toLowerCase().includes(query),
       ),
     );
   }, [searchTerm, trades]);
@@ -60,8 +60,8 @@ const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteT
     const rows = [...filteredTrades];
 
     rows.sort((a, b) => {
-      const first = a[sortKey].toString().toLowerCase();
-      const second = b[sortKey].toString().toLowerCase();
+      const first = sortKey === 'time' ? a.timeValue : a[sortKey];
+      const second = sortKey === 'time' ? b.timeValue : b[sortKey];
 
       if (first < second) return sortDirection === 'asc' ? -1 : 1;
       if (first > second) return sortDirection === 'asc' ? 1 : -1;
@@ -154,7 +154,16 @@ const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteT
                         <span>{sortKey === 'side' ? (sortDirection === 'asc' ? '↑' : '↓') : '↕'}</span>
                       </button>
                     </th>
-                    <th>Quantity</th>
+                    <th>
+                      <button
+                        type="button"
+                        className={`sort-button ${sortKey === 'quantity' ? 'active' : ''}`}
+                        onClick={() => handleSort('quantity')}
+                      >
+                        Quantity
+                        <span>{sortKey === 'quantity' ? (sortDirection === 'asc' ? '↑' : '↓') : '↕'}</span>
+                      </button>
+                    </th>
                     <th>
                       <button
                         type="button"
@@ -165,8 +174,26 @@ const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteT
                         <span>{sortKey === 'status' ? (sortDirection === 'asc' ? '↑' : '↓') : '↕'}</span>
                       </button>
                     </th>
-                    <th>Time</th>
-                    <th>Trader</th>
+                    <th>
+                      <button
+                        type="button"
+                        className={`sort-button ${sortKey === 'time' ? 'active' : ''}`}
+                        onClick={() => handleSort('time')}
+                      >
+                        Date &amp; time
+                        <span>{sortKey === 'time' ? (sortDirection === 'asc' ? '↑' : '↓') : '↕'}</span>
+                      </button>
+                    </th>
+                    <th>
+                      <button
+                        type="button"
+                        className={`sort-button ${sortKey === 'trader' ? 'active' : ''}`}
+                        onClick={() => handleSort('trader')}
+                      >
+                        Trader
+                        <span>{sortKey === 'trader' ? (sortDirection === 'asc' ? '↑' : '↓') : '↕'}</span>
+                      </button>
+                    </th>
                     <th className="action-column">Delete</th>
                     <th className="action-column">Update</th>
                   </tr>
@@ -177,7 +204,7 @@ const TradeList: React.FunctionComponent<ITradeListProps> = ({ trades, onDeleteT
                       <tr key={trade.tradeId || `${trade.symbol}-${index}`}>
                         <td className="symbol-cell">{trade.symbol}</td>
                         <td className={`side-cell ${trade.side.toLowerCase()}`}>{trade.side}</td>
-                        <td className="quantity-cell">{trade.quantity}</td>
+                        <td className="quantity-cell">{trade.quantity.toLocaleString()}</td>
                         <td className={`status-cell ${trade.status.toLowerCase()}`}>
                           {trade.status}
                         </td>

@@ -21,5 +21,5 @@ export interface Trade {
   status: string;
 };
 
-export type SortKey = 'symbol' | 'side' | 'status';
+export type SortKey = 'symbol' | 'side' | 'quantity' | 'status' | 'time' | 'trader';
 export type SortDirection = 'asc' | 'desc';
