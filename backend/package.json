@@ -4,6 +4,7 @@
   "description": "Express.js backend for TradersHub with MongoDB support",
   "main": "server.js",
   "scripts": {
+    "build": "node --check server.js",
     "start": "node server.js",
     "dev": "node --watch server.js"
   },
