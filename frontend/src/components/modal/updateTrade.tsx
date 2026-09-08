@@ -127,7 +127,7 @@ const UpdateTrade: React.FunctionComponent<IUpdateTradeProps> = ({ trade, onConf
             </label>
             <label>
               Trader
-              <input value={form.trader} onChange={(event) => updateField('trader', event.target.value)} />
+              <input value={form.trader} onChange={(event) => updateField('trader', event.target.value)} disabled />
             </label>
             <label>
               Book
