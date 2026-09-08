@@ -8,15 +8,27 @@ const bcrypt = require('bcrypt');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const { Server } = require('socket.io');
 
-const FRONTEND_ORIGINS = [
-  'http://localhost:5173',
-  'https://tradershub-teal.vercel.app',
-  ...(process.env.FRONTEND_URL || '').split(','),
-]
-  .map((origin) => origin.trim())
+const FRONTEND_ORIGINS = (process.env.FRONTEND_URL || '')
+  .split(',')
+  .map((origin) => origin.trim().replace(/\/$/, ''))
   .filter(Boolean)
   .filter((origin, index, origins) => origins.indexOf(origin) === index);
 const isAllowedOrigin = (origin) => !origin || FRONTEND_ORIGINS.includes(origin);
+const BACKEND_URLS = (process.env.PROD_BACKEND_URL || '')
+  .split(',')
+  .map((url) => url.trim().replace(/\/$/, ''))
+  .filter(Boolean);
+
+const getPublicUrl = () => {
+  if (BACKEND_URLS.length === 0) {
+    //worst case scenario, return localhost with the port
+    return `http://localhost:${PORT}`;
+  }
+
+  return process.env.NODE_ENV === 'production'
+    ? BACKEND_URLS[BACKEND_URLS.length - 1]
+    : BACKEND_URLS[0];
+};
 
 const app = express();
 const httpServer = http.createServer(app);
@@ -374,20 +386,20 @@ async function startServer() {
   await connectToMongo();
 
   httpServer.listen(PORT, HOST, () => {
-    const publicUrl = process.env.PROD_BACKEND_URL
-      || process.env.RENDER_EXTERNAL_URL
-      || (process.env.RAILWAY_PUBLIC_DOMAIN && `https://${process.env.RAILWAY_PUBLIC_DOMAIN}`)
-      || `http://localhost:${PORT}`;
+    const publicUrl = getPublicUrl();
+
     console.log(`Server running on ${publicUrl}`);
   });
 }
 
-startServer().catch((error) => {
-  console.error('Failed to start server:', error);
-  process.exit(1);
-});
+function setDatabase(database) {
+  db = database;
+}
 
 module.exports = {
   app,
+  getPublicUrl,
   normalizeTradeTimestamp,
+  setDatabase,
+  startServer,
 };
