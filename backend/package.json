@@ -2,12 +2,15 @@
   "name": "tradershub-backend",
   "version": "1.0.0",
   "description": "Express.js backend for TradersHub with MongoDB support",
-  "main": "server.js",
+  "main": "start.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "build": "node --check server.js",
     "start": "node start.js",
     "dev": "node --watch start.js",
-    
     "test": "node --test"
   },
   "keywords": [
