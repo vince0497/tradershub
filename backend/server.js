@@ -25,7 +25,7 @@ const getPublicUrl = () => {
     return `http://localhost:${PORT}`;
   }
 
-  return process.env.NODE_ENV === 'production'
+  return process.env.NODE_ENV_STATUS === 'production'
     ? BACKEND_URLS[BACKEND_URLS.length - 1]
     : BACKEND_URLS[0];
 };
@@ -70,7 +70,7 @@ function getSessionToken(request) {
 }
 
 function setSessionCookie(response, token, expires) {
-  const isProduction = process.env.NODE_ENV === 'production'
+  const isProduction = process.env.NODE_ENV_STATUS === 'production'
     || process.env.RENDER_EXTERNAL_URL
     || process.env.RAILWAY_PUBLIC_DOMAIN;
   const sameSite = isProduction ? 'None' : 'Lax';
